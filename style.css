@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color:rgba(255, 255, 255, 0.801);
+    height: 100vh;
+   
+
+}
+
+nav img{
+    width: 400px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+nav{
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    top: 0;
+
+}
+nav .top, .top a{
+    width: 100%;
+    height: 30px;
+    animation-name: topnav;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+
+}
+.container{
+    margin: 0 auto;
+    padding: 0 30px;
+
+    
+}
+
+.icons{
+    width: 25px;
+    height:30px;
+    
+}
+
+@keyframes topnav{
+    0%{
+        background-color:gray;
+    
+    }
+
+    50%{    
+    }
+    
+    100%{
+        background-color: black;
+    }
+}
+
+.search-icon{
+    width: 20px;  
+}
+
+.first-navMenu{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    top: 10px;
+    column-gap: 18em;
+
+    
+}
+
+.first-navMenu ul, .first-navMenu a{
+display: flex;
+list-style-type:none;
+color:black;
+text-decoration: none;
+z-index: 999;
+position: relative;
+left: 0%;
+
+}
+
+.first-navMenu .one ul,.first-navMenu .one a{
+    display: flex;
+    column-gap: 1em;
+    font-weight: 400; 
+    font-size: 15px;
+
+
+    
+}
+
+
+.first-navMenu .two {
+    font-size: x-large;
+    display: flex;
+    
+    
+
+}
+.first-navMenu .three  ul{ 
+display: flex;
+column-gap: 1.2em;
+
+
+
+}
+/* SECOND NAV STARTED HERE*/
+.second-navbarContainer{
+    display: flex;
+    justify-content: space-between;
+    padding-top:50px ;
+    font-size: 15px;
+    
+}
+
+.second-navbarContainer ul{
+    display: flex;
+    list-style-type: none;
+    column-gap: 1em;
+    white-space: nowrap;
+}
+
+.second-navbarContainer a{
+    text-decoration: none;
+    color: black;
+}
+
+.second-navbarContainer input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    padding: 0 15px;
+    font-size: 15px;
+    text-align: center;
+    
+
+
+}
+
+.nav-item{
+    position: relative;
+}
+
+/*DROPDOWN STYLING */
+
+.dropdown{
+    display: none;
+    width: 100vw;
+    height: 65vh;
+    background:rgba(255, 255, 255, 0.801);
+    gap: 37rem;
+    z-index: 999; 
+    box-shadow: 0px 3px 5px #f1f1f1;
+    position: absolute;
+    top: 2.2em;
+    backdrop-filter: blur(100%);
+    z-index: 999;
+}
+
+.dropdown .dropdown-item-one{
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    gap: 0.8em;
+}
+.dropdown .dropdown-item-one a:hover{
+    text-decoration: underline;
+
+}
+
+.dropdown .dropdown-item-one h2{
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 3;
+}
+
+.dropdown .dropdown-item-two{
+    display: flex;
+    flex-direction: column;
+    padding-top:10px ;
+
+}
+.dropdown .dropdown-item-two .shop{
+    text-decoration: underline;
+    line-height: 3;
+    
+}
+
+.Spotlight{
+    color: rgb(155, 149, 149);
+    line-height: 2;
+}
+
+
+.nav-item:hover .dropdown{
+  display: flex;
+ 
+}
+
+
+/*NEW IN DROPDOWN*/
+
+ .newinDropdown{
+    position: absolute;
+    display: none;
+    white-space: nowrap;
+    width: 100vw;
+    height: 65vh;
+    background-color: rgba(255, 255, 255, 0.801);
+    left: 28px;
+    margin-top: 20px; 
+    column-gap: 6em;
+    z-index: 999;
+    
+}
+.newin{
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    padding-top: 2.5em;
+}
+
+.One a:hover,.Two a:hover, .Three a:hover{
+    text-decoration: underline;
+}
+.One{
+    display: flex;
+    row-gap: 1em;
+}
+
+
+.Two{
+    display:flex;
+    row-gap:1em;
+
+}
+
+.Three{
+    display: flex;
+    row-gap:1em;
+
+}
+
+.Four{
+    display: flex;
+    
+    
+}
+.One h2,.Two h2,.Three h2{
+    line-height: 3;
+    font-weight: 100;
+    font-size: 1em;
+}
+
+.nav-menu:hover .newinDropdown{
+    display: flex;
+}
+.Four .shop{
+    text-decoration: underline;
+    line-height: 3;
+}  
+/* NAVIGATION ENDS HERE*/
