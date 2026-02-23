@@ -12,19 +12,12 @@ body{
 
 }
 
-nav img{
-    width: 400px;
-    height: 300px;
-    display: flex;
-    justify-content: space-around;
-
-}
 
 nav{
     width: 100%;
     height: 150px;
     position: fixed;
-    top: 0;
+    z-index: 1000;
 
 }
 nav .top, .top a{
@@ -39,18 +32,8 @@ nav .top, .top a{
     color:white;
 
 }
-.container{
-    margin: 0 auto;
-    padding: 0 30px;
 
-    
-}
 
-.icons{
-    width: 25px;
-    height:30px;
-    
-}
 
 @keyframes topnav{
     0%{
@@ -65,60 +48,87 @@ nav .top, .top a{
         background-color: black;
     }
 }
+/*======TOP OF THE NAVIGATION ENDED HERE===========*/
 
-.search-icon{
-    width: 20px;  
+/*======ALL WORKING ICONS ARE HERE=======*/
+.icons{
+    width: 25px;
+    height:30px;
+    
 }
 
-.first-navMenu{
+nav img{
+    width: 400px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.search-icon{
+    width: 20px; 
+    position: absolute;
+    color: black; 
+    
+    
+}
+/*======== WORKIN ICON ENDS HERE========*/
+
+.container{
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 1200px;
+
+    
+}
+
+
+
+.firstmenu-parent{
     display: flex;
     width: 100%;
     align-items: center;
     position: relative;
     top: 10px;
-    column-gap: 18em;
+    justify-content: space-between;
+    
 
     
 }
 
-.first-navMenu ul, .first-navMenu a{
+
+
+.firstmenu-parent .fashion-gender ul, .firstmenu-parent .fashion-gender a{
 display: flex;
 list-style-type:none;
 color:black;
 text-decoration: none;
-z-index: 999;
 position: relative;
 left: 0%;
+column-gap: 1em;
 
 }
 
-.first-navMenu .one ul,.first-navMenu .one a{
-    display: flex;
-    column-gap: 1em;
-    font-weight: 400; 
-    font-size: 15px;
 
 
-    
-}
+.logo{ 
+text-align: center;
+font-size: x-large;
+font-weight: 900;
+} 
 
-
-.first-navMenu .two {
-    font-size: x-large;
-    display: flex;
-    
-    
-
-}
-.first-navMenu .three  ul{ 
+.shopin-icons ul{ 
 display: flex;
-column-gap: 1.2em;
+column-gap: 1em;
+list-style-type: none;
 
 
 
 }
 /* SECOND NAV STARTED HERE*/
+
 .second-navbarContainer{
+
     display: flex;
     justify-content: space-between;
     padding-top:50px ;
@@ -146,9 +156,6 @@ column-gap: 1.2em;
     padding: 0 15px;
     font-size: 15px;
     text-align: center;
-    
-
-
 }
 
 .nav-item{
@@ -163,12 +170,12 @@ column-gap: 1.2em;
     height: 65vh;
     background:rgba(255, 255, 255, 0.801);
     gap: 37rem;
-    z-index: 999; 
+    z-index: 1; 
     box-shadow: 0px 3px 5px #f1f1f1;
     position: absolute;
     top: 2.2em;
-    backdrop-filter: blur(100%);
-    z-index: 999;
+    backdrop-filter: blur(5px);
+
 }
 
 .dropdown .dropdown-item-one{
@@ -177,9 +184,9 @@ column-gap: 1.2em;
     white-space: nowrap;
     gap: 0.8em;
 }
+
 .dropdown .dropdown-item-one a:hover{
     text-decoration: underline;
-
 }
 
 .dropdown .dropdown-item-one h2{
@@ -194,23 +201,19 @@ column-gap: 1.2em;
     padding-top:10px ;
 
 }
+
 .dropdown .dropdown-item-two .shop{
     text-decoration: underline;
-    line-height: 3;
-    
+    line-height: 3;    
 }
 
 .Spotlight{
     color: rgb(155, 149, 149);
     line-height: 2;
 }
-
-
 .nav-item:hover .dropdown{
   display: flex;
- 
 }
-
 
 /*NEW IN DROPDOWN*/
 
@@ -218,13 +221,13 @@ column-gap: 1.2em;
     position: absolute;
     display: none;
     white-space: nowrap;
-    width: 100vw;
+    width: 100%;
     height: 65vh;
     background-color: rgba(255, 255, 255, 0.801);
     left: 28px;
     margin-top: 20px; 
     column-gap: 6em;
-    z-index: 999;
+    z-index: 1;
     
 }
 .newin{
@@ -273,4 +276,41 @@ column-gap: 1.2em;
     text-decoration: underline;
     line-height: 3;
 }  
+
+@media screen and (max-width: 768px){
+    .firstmenu-parent .fashion-gender ul{
+        display: none;
+    }
+    .firstmenu-parent{
+        display: flex;
+    }
+    
+    input, .second-navbarContainer{
+        display: none;
+        padding-top: 0;
+    }
+
+    .logo{
+    
+        
+    }
+    .initial{
+        display: none;
+    }
+
+    .search-icon{
+    
+    display: inline;
+    padding-top:0px ;
+    font-size: 15px;
+    }
+
+
+
+}
 /* NAVIGATION ENDS HERE*/
+
+
+header{
+    padding-top: 150px;
+}
